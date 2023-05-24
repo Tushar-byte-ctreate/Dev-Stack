@@ -9,7 +9,7 @@ let isConnected = false;
         return;
     }
     try {
-        await mongoose.connect(process.env.MONGODB_URI',{
+        await mongoose.connect(process.env.MONGODB_URI,{
             dbName:"Next-Blog",
             useNewUrlParser:true,
             useUnifiedTopology:true
