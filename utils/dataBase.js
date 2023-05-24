@@ -9,7 +9,7 @@ let isConnected = false;
         return;
     }
     try {
-        await mongoose.connect('mongodb+srv://process.env.MONGODB_USER:process.env.MONGODB_PASS@cluster0.9uywv.mongodb.net/',{
+        await mongoose.connect(process.env.MONGODB_URI',{
             dbName:"Next-Blog",
             useNewUrlParser:true,
             useUnifiedTopology:true
