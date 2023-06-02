@@ -9,7 +9,7 @@ const Blogs = () => {
   const [posts , setPosts] = useState([])
 
   const getBlog = async () =>{
-       const fetchBlog = await fetch('/api/blog',{cache: 'no-store'})
+       const fetchBlog = await fetch('/api/blog',{next:{revalidate:0}})
        const data = await fetchBlog.json()
 
        if(fetchBlog) return setPosts(data)
