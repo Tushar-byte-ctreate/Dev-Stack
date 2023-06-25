@@ -19,7 +19,7 @@ const Blogs = () => {
   
   useEffect(()=>{
     getBlog()
-  },[])
+  })
 
   return (
     <section class="text-gray-600 min-h-screen body-font">
